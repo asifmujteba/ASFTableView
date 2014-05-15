@@ -58,6 +58,7 @@ NSArray *cols = @[@"Person ID",@"Person Name",@"Phone Number",@"Sex"];
 
 ASFTableViewPublicGlobals.h contains available customization options:
 
+````
 kASF_OPTION_BACKGROUND;
 kASF_OPTION_CELL_BACKGROUND;
 kASF_OPTION_CELL_BORDER_COLOR;
@@ -80,3 +81,4 @@ kASF_CELL_IS_EDITABLE;
 kASF_CELL_TEXTVIEW_DELEGATE;
 kASF_CELL_TEXTVIEW_TAG;
 kASF_CELL_IS_KEY;
+````
