@@ -21,6 +21,11 @@
 		F69F7FF91923E3380062E05B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69F7FDB1923E3370062E05B /* UIKit.framework */; };
 		F69F80011923E3380062E05B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F69F7FFF1923E3380062E05B /* InfoPlist.strings */; };
 		F69F80031923E3380062E05B /* ASFTableViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F69F80021923E3380062E05B /* ASFTableViewDemoTests.m */; };
+		F69F80171923E3660062E05B /* ASFLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F69F800E1923E3660062E05B /* ASFLabel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F69F80181923E3660062E05B /* ASFTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F69F80101923E3660062E05B /* ASFTableView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F69F80191923E3660062E05B /* ASFTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F69F80121923E3660062E05B /* ASFTableViewCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F69F801A1923E3660062E05B /* ASFTableViewPrivateGlobals.m in Sources */ = {isa = PBXBuildFile; fileRef = F69F80141923E3660062E05B /* ASFTableViewPrivateGlobals.m */; };
+		F69F801B1923E3660062E05B /* ASFTableViewPublicGlobals.m in Sources */ = {isa = PBXBuildFile; fileRef = F69F80161923E3660062E05B /* ASFTableViewPublicGlobals.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,16 @@
 		F69F7FFE1923E3380062E05B /* ASFTableViewDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ASFTableViewDemoTests-Info.plist"; sourceTree = "<group>"; };
 		F69F80001923E3380062E05B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F69F80021923E3380062E05B /* ASFTableViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASFTableViewDemoTests.m; sourceTree = "<group>"; };
+		F69F800D1923E3660062E05B /* ASFLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASFLabel.h; sourceTree = "<group>"; };
+		F69F800E1923E3660062E05B /* ASFLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASFLabel.m; sourceTree = "<group>"; };
+		F69F800F1923E3660062E05B /* ASFTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASFTableView.h; sourceTree = "<group>"; };
+		F69F80101923E3660062E05B /* ASFTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASFTableView.m; sourceTree = "<group>"; };
+		F69F80111923E3660062E05B /* ASFTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASFTableViewCell.h; sourceTree = "<group>"; };
+		F69F80121923E3660062E05B /* ASFTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASFTableViewCell.m; sourceTree = "<group>"; };
+		F69F80131923E3660062E05B /* ASFTableViewPrivateGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASFTableViewPrivateGlobals.h; sourceTree = "<group>"; };
+		F69F80141923E3660062E05B /* ASFTableViewPrivateGlobals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASFTableViewPrivateGlobals.m; sourceTree = "<group>"; };
+		F69F80151923E3660062E05B /* ASFTableViewPublicGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASFTableViewPublicGlobals.h; sourceTree = "<group>"; };
+		F69F80161923E3660062E05B /* ASFTableViewPublicGlobals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASFTableViewPublicGlobals.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +127,7 @@
 		F69F7FDD1923E3370062E05B /* ASFTableViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F69F800C1923E3660062E05B /* ASFTableView */,
 				F69F7FE61923E3370062E05B /* AppDelegate.h */,
 				F69F7FE71923E3370062E05B /* AppDelegate.m */,
 				F69F7FE91923E3370062E05B /* Main.storyboard */,
@@ -150,6 +166,23 @@
 				F69F7FFF1923E3380062E05B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F69F800C1923E3660062E05B /* ASFTableView */ = {
+			isa = PBXGroup;
+			children = (
+				F69F800D1923E3660062E05B /* ASFLabel.h */,
+				F69F800E1923E3660062E05B /* ASFLabel.m */,
+				F69F800F1923E3660062E05B /* ASFTableView.h */,
+				F69F80101923E3660062E05B /* ASFTableView.m */,
+				F69F80111923E3660062E05B /* ASFTableViewCell.h */,
+				F69F80121923E3660062E05B /* ASFTableViewCell.m */,
+				F69F80131923E3660062E05B /* ASFTableViewPrivateGlobals.h */,
+				F69F80141923E3660062E05B /* ASFTableViewPrivateGlobals.m */,
+				F69F80151923E3660062E05B /* ASFTableViewPublicGlobals.h */,
+				F69F80161923E3660062E05B /* ASFTableViewPublicGlobals.m */,
+			);
+			path = ASFTableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,9 +282,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F69F801A1923E3660062E05B /* ASFTableViewPrivateGlobals.m in Sources */,
+				F69F80191923E3660062E05B /* ASFTableViewCell.m in Sources */,
 				F69F7FEE1923E3370062E05B /* ViewController.m in Sources */,
 				F69F7FE81923E3370062E05B /* AppDelegate.m in Sources */,
+				F69F80181923E3660062E05B /* ASFTableView.m in Sources */,
 				F69F7FE41923E3370062E05B /* main.m in Sources */,
+				F69F801B1923E3660062E05B /* ASFTableViewPublicGlobals.m in Sources */,
+				F69F80171923E3660062E05B /* ASFLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +421,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ASFTableViewDemo/ASFTableViewDemo-Prefix.pch";
 				INFOPLIST_FILE = "ASFTableViewDemo/ASFTableViewDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -396,6 +435,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ASFTableViewDemo/ASFTableViewDemo-Prefix.pch";
 				INFOPLIST_FILE = "ASFTableViewDemo/ASFTableViewDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -462,6 +502,7 @@
 				F69F80081923E3380062E05B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F69F80091923E3380062E05B /* Build configuration list for PBXNativeTarget "ASFTableViewDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -470,6 +511,7 @@
 				F69F800B1923E3380062E05B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
