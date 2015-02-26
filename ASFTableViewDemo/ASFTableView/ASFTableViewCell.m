@@ -28,6 +28,9 @@
         _arrLabels = [[NSMutableArray alloc] init];
         _arrTextViews = [[NSMutableArray alloc] init];
         minHeight = kDEFAULT_MIN_HEIGHT;
+        
+        self.translatesAutoresizingMaskIntoConstraints = YES;
+        [self setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
     }
     return self;
 }

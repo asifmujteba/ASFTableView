@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12E55" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14C109" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <deployment defaultVersion="1536" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,20 +17,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gUF-5a-Gjw" customClass="ASFTableView">
-                                <rect key="frame" x="0.0" y="168" width="768" height="660"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gUF-5a-Gjw" customClass="ASFTableView">
+                                <rect key="frame" x="0.0" y="20" width="768" height="481"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Qv-8z-yOJ">
+                                <rect key="frame" x="0.0" y="509" width="768" height="481"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8Qv-8z-yOJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Fcf-9c-P0c"/>
+                            <constraint firstAttribute="trailing" secondItem="8Qv-8z-yOJ" secondAttribute="trailing" id="KQ5-3X-WXa"/>
+                            <constraint firstItem="8Qv-8z-yOJ" firstAttribute="width" secondItem="gUF-5a-Gjw" secondAttribute="width" id="bdl-aW-Y6t"/>
+                            <constraint firstItem="AwS-rs-16P" firstAttribute="top" secondItem="8Qv-8z-yOJ" secondAttribute="bottom" constant="34" id="d0f-Xf-URc"/>
+                            <constraint firstAttribute="trailing" secondItem="gUF-5a-Gjw" secondAttribute="trailing" id="hUS-pA-gtx"/>
+                            <constraint firstItem="gUF-5a-Gjw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hfR-7i-4ed"/>
+                            <constraint firstItem="8Qv-8z-yOJ" firstAttribute="height" secondItem="gUF-5a-Gjw" secondAttribute="height" id="lO9-5K-pFm"/>
+                            <constraint firstItem="gUF-5a-Gjw" firstAttribute="top" secondItem="m0f-LH-Esp" secondAttribute="bottom" id="vrl-aN-eCO"/>
+                            <constraint firstItem="8Qv-8z-yOJ" firstAttribute="top" secondItem="gUF-5a-Gjw" secondAttribute="bottom" constant="8" id="xPB-Hw-mjZ"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="View2" destination="8Qv-8z-yOJ" id="7se-nY-8xB"/>
                         <outlet property="mASFTableView" destination="gUF-5a-Gjw" id="ar3-nz-0fj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="167" y="61"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

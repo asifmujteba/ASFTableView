@@ -9,7 +9,7 @@
 #import "ASFLabel.h"
 
 @interface ASFLabel () {
-    int padding;
+    NSUInteger padding;
 }
 
 @end

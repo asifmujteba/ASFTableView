@@ -14,16 +14,18 @@
     BOOL floatHeader;
 }
 
+@property (nonatomic, assign) NSUInteger headerHeight;
 @property (nonatomic, retain) UITableView *tableView;
 @property (nonatomic, retain) NSMutableArray *rowData;
-@property (nonatomic, retain) NSArray *weights, *innerWeights;
+@property (nonatomic, retain) NSArray *weights, *innerWeights, *titlesArray;
+@property (nonatomic, retain) NSDictionary *headerOptions;
 @property (nonatomic, retain) UIView *selectedBackgroundView;
 @property (nonatomic, retain) ASFTableViewCell *headerView;
 
 @end
 
 @implementation ASFTableView
-@synthesize delegate;
+@synthesize delegate, headerHeight;
 
 - (id)init {
     self = [super init];
@@ -56,12 +58,17 @@
     [_rowData release], _rowData = nil;
     [_weights release], _weights = nil;
     [_innerWeights release], _innerWeights = nil;
+    [_titlesArray release], _titlesArray = nil;
+    [_headerOptions release], _headerOptions = nil;
     [_selectedBackgroundView release], _selectedBackgroundView = nil;
     [super dealloc];
 }
 
 - (void)initialize {
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+    _tableView.translatesAutoresizingMaskIntoConstraints = YES;
+    [_tableView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
+    
     [_tableView setDataSource:self];
     [_tableView setDelegate:self];
     [_tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
@@ -95,12 +102,23 @@
     [self setTitles:aArr WithWeights:aWeights WithInnerWeights:nil WithOptions:aOptions WitHeight:aHeight Floating:aFloat];
 }
 
+-(void)layoutSubviews {
+    [super layoutSubviews];
+    
+    if (_titlesArray) {
+        [self setTitles:_titlesArray WithWeights:_weights WithOptions:_headerOptions WitHeight:headerHeight Floating:floatHeader];
+    }
+}
+
 - (void)setTitles:(NSArray *)aArr WithWeights:(NSArray *)aWeights WithInnerWeights:(NSArray *)aInnerWeights
       WithOptions:(NSDictionary *)aOptions WitHeight:(NSUInteger)aHeight Floating:(BOOL)aFloat {
     
     floatHeader = aFloat;
     self.weights = aWeights;
+    self.headerHeight = aHeight;
     self.innerWeights = aInnerWeights;
+    self.titlesArray = aArr;
+    self.HeaderOptions = aOptions;
     
     ASFTableViewCell *hView = [[ASFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"HEADER"];
     [hView setFrame:CGRectMake(0, 0, [self frame].size.width, aHeight)];

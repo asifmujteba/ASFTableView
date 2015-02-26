@@ -14,7 +14,7 @@
 @interface ASFTableViewCell : UITableViewCell
 
 @property (nonatomic, retain) NSObject *rowId;
-@property (nonatomic, assign) int minHeight;
+@property (nonatomic, assign) NSUInteger minHeight;
 
 - (void)setColumns:(NSArray *)aArr Options:(NSDictionary *)aOptions IsInnerRow:(BOOL)isInnerRow;
 
